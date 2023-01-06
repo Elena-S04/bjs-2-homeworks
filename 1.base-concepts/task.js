@@ -1,20 +1,19 @@
 "use strict";
 function solveEquation(a, b, c) {
   let arr = [];
+  let discriminant = b * b - 4 * a * c;
+  
   let x;
   let y;
-
-  let discriminant = b * b - 4 * a * c;
-
   if (discriminant < 0) {
-    return (arr = []);
+    return [];
   } else if (discriminant === 0) {
     x = -b / (2 * a);
-    return (arr = [x]);
+    return [x];
   } else if (discriminant > 0) {
     x = (-b + Math.sqrt(discriminant)) / (2 * a);
     y = (-b - Math.sqrt(discriminant)) / (2 * a);
-    return (arr = [x, y]);
+    return [x, y];
   }
 }
 
