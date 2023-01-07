@@ -1,10 +1,9 @@
 "use strict";
 function solveEquation(a, b, c) {
-  let arr = [];
   let discriminant = b * b - 4 * a * c;
-  
   let x;
   let y;
+
   if (discriminant < 0) {
     return [];
   } else if (discriminant === 0) {
